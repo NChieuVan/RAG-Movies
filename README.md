@@ -36,17 +36,8 @@ import pymongo`
 - `import pandas`
 
 
-## Pipeline Diagram
-
-```mermaid
-graph TD
-    A[Load Movie Data] --> B[Embed Documents]
-    B --> C[Store in VectorStore (FAISS)]
-    C --> D[Retriever: find top-k relevant docs]
-    D --> E[LLM (RAG) Generate Answer]
-    E --> F[Return Answer to User]
-```
-
+## Pipeline Diagram demo
+![alt text](<Screenshot 2025-06-23 011137.png>)
 ## How to Run
 
 ```bash
