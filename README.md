@@ -5,20 +5,20 @@ This project implements a **Retrieval-Augmented Generation (RAG)** pipeline to a
 ## Main Steps
 
 1. **Load and Prepare Data**
-    - Load movie data (e.g. from CSV or DataFrame).
+    - Load movie data (Huggingface).
     - Prepare documents to be embedded and stored.
 
 2. **Embedding Generation**
     - Use HuggingFace embeddings (sentence transformers) to convert documents to vector embeddings.
 
 3. **VectorStore**
-    - Store embeddings into FAISS VectorStore.
+    - Store embeddings into FAISS VectorStore. (**MongoDB Atlat search vector**)
 
 4. **Retriever**
-    - Use retriever to find top-k relevant documents for a given user query.
+    - Use retriever to find top-k relevant documents for a given user query. (**cosine highest**)
 
 5. **LLM (RAG)**
-    - Combine retrieved documents + user query, and pass to LLM for final answer generation.
+    - Combine retrieved documents + user query, and pass to LLM for final answer generation.(**google/gemma-2-2b-it**)
 
 ## Main Libraries
 
